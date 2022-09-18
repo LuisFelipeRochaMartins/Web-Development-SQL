@@ -22,12 +22,3 @@ function tirarNumeros(x){
 
     return document.getElementById(x).value = str
 }
-
-function pegaSubmit(event) {
-    event.preventDefault();
-
-    const dados = new FormData(event.target);
-    const valor= Object.fromEntries(dados.entries());
-
-    alert(JSON.stringify(valor, null, 2));
-}
