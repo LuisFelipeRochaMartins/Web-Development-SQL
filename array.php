@@ -14,8 +14,8 @@ $dados1 = file_get_contents('contact.json');
 $vetor = json_decode($dados1, true);
 $Array[] = $dados;
 
-$caminho = fopen('contatos.json', 'w+');
+$caminho = fopen('contact.json', 'w+');
 
 fwrite($caminho, json_encode($vetor));  
-header('location : index.html')
+header('location : list.php')
 ?>

@@ -1,1 +1,9 @@
-[{"Nome":"asddddd","Sobrenome":"asddddd","Telefone":null,"Email":"saASSs@AC.COM","Origem":null,"Data":null,"Parente":"on"},{"Nome":"asddddd","Sobrenome":"asddddd","Telefone":null,"Email":"saASSs@AC.COM","Origem":null,"Data":null,"Social":null,"Genero":null,"Parente":"on"},{"Nome":"asddddd","Sobrenome":"asddddd","Data":"31232-03-12","Email":"saASSs@AC.COM","Parente":"on"}]
+[
+    {
+        "id": "<br \/><b>Warning<\/b>:  Undefined property: stdClass::$id in <b>C:\\Users\\luisi\\OneDrive\\Documentos\\Coding\\Xampp\\htdocs\\Validacaojs\\editar.php<\/b> on line <b>28<\/b><br \/>",
+        "name": null,
+        "Surname": null,
+        "Age": null,
+        "Email": null
+    }
+]
