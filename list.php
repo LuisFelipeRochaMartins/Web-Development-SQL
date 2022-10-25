@@ -20,10 +20,8 @@
                 <thead>
                     <th>Nome</th>
                     <th>Sobrenome</th>
-                    <th>Idade</th>
                     <th>Email</th>
                     <th>Telefone</th>
-                    <th>Sexo</th>
                     <th>Opções</th>
                 </thead>
                 <tbody>
@@ -31,22 +29,18 @@
                         $data = file_get_contents('contact.json');
                         $data = json_decode($data);
                         $index = 0;
-                        foreach($data as $row){
+                        foreach($data as $value){
                             echo "
                                 <tr>
-                                    <td>".$row->nome."</td> 
-                                    <td>".$row->sobrenome."</td>
-                                    <td>".$row->numero."</td>
-                                    <td>".$row->email."</td>
-                                    <td>".$row->Telefone."</td>
-                                    <td>".$row->$Sexo."</td>
+                                    <td>{$value->sNome}</td>
+                                    <td>{$value->sSobrenome}</td>
+                                    <td>{$value->sEmail}</td>
+                                    <td>{$value->sTel}</td>
                                     <td>
                                         <a href='editar.php?index=".$index."' class='btn btn-success btn-sm'>Editar</a>
                                         <a href='deletar.php?index=".$index."' class='btn btn-danger btn-sm'>Deletar</a>
                                     </td>
-                                </tr>
-                            ";
-                             $index++;
+                                </tr>";  
                         }
                     ?>
                 </tbody>

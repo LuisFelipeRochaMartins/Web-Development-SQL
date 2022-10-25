@@ -21,13 +21,13 @@
     <div class="col">
       <div>
         <div>
-          <form name ="formulario" action="array.php" method="post">
+          <form name ="formulario" action="data.php" method="post">
             <div class="mb-2"  >
               <label for="name" class="form-label">Nome</label>
               <div class="col-sm-8">
                 <input type="text"
                 class="form-control" 
-                id="name" name="nome"
+                id="name" name="sNome"
                 aria-describedby="nameHelp"
                 placeholder="Seu nome aqui" 
                 required onchange="tirarNumeros('name')">
@@ -38,7 +38,7 @@
               <div class="col-sm-8">
                 <input type="text"
                 class="form-control"
-                id="surname"name="sobrenome"
+                id="surname"name="sSobrenome"
                 aria-describedby="surnameHelp"
                 placeholder="Seu Sobrenome"
                 required onchange="tirarNumeros('surname')">
@@ -70,13 +70,13 @@
               <div class ="col-sm-8"> 
                 <input type="email"
                 class="form-control"
-                name="email"id="email"
+                name="sEmail"id="sEmail"
                 aria-describedby="emailHelp"
                 placeholder="Seu e-mail" required>
               </div>
             </div>
 
-            <div id="emailHelp" class="form-text">Nós nunca vamos compartilhar seu Email com ninguém.</div>
+            <div id="Telefone" class="form-text">Nós nunca vamos compartilhar seu Email com ninguém.</div>
             <div class="mb-0" >
               <label for="telefone" class="form-label">Telefone</label>
             </div>
@@ -84,7 +84,7 @@
             <div class="col-sm-8">
               <input type="text"
               class="form-control"
-              id="tel" name="telefone"
+              id="sTel" name="sTel"
               aria-describedby="telHelp"
               placeholder="Seu telefone"
               required onchange="formatarTel()" >
@@ -145,7 +145,23 @@
               <option value="1" name="select2" >Masculino</option>
               <option value="2" name="select2" >Feminino</option>
             </div>
-            </select>
+            </div>
+            <span>ID do Contato</span>
+            <div class="mb-2 form-check"></div>
+            <div class="input-group mb-6">
+              <div class="col-sm-8">
+                <div class="mb-2">
+                <span>Origem do Contato</span>
+                <div class="mb-2" >
+              <label for="sID" class="form-label">Endereço de Email</label>
+              <div class ="col-xs-8"> 
+                <input type="email"
+                class="form-control"
+                name="sID"id="sID"
+                aria-describedby="emailHelp"
+                placeholder="ID do Contato" required>
+              </div>
+            </div>
           </div>
           </form>
         </div>
