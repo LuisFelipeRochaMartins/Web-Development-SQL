@@ -20,6 +20,7 @@
                 <thead>
                     <th>Nome</th>
                     <th>Sobrenome</th>
+                    <th>ID</th>
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Opções</th>
@@ -34,6 +35,7 @@
                                 <tr>
                                     <td>{$value->sNome}</td>
                                     <td>{$value->sSobrenome}</td>
+                                    <td>{$value->ID}</td>
                                     <td>{$value->sEmail}</td>
                                     <td>{$value->sTel}</td>
                                     <td>

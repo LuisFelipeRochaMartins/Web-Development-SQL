@@ -120,7 +120,7 @@
                 <option value="1" name="select1">Escola</option>
                 <option value="2" name="select1">Trabalho</option>
                 <option value="3" name="select1">Festas</option>
-                <option value="4" name="select1">Família</option>
+                <option value="4" name="select1">Famíl  ia</option>
               </div>
               </select>
             </div>
@@ -146,20 +146,6 @@
               <option value="2" name="select2" >Feminino</option>
             </div>
             </div>
-            <span>ID do Contato</span>
-            <div class="mb-2 form-check"></div>
-            <div class="input-group mb-6">
-              <div class="col-sm-8">
-                <div class="mb-2">
-                <span>Origem do Contato</span>
-                <div class="mb-2" >
-              <label for="sID" class="form-label">Endereço de Email</label>
-              <div class ="col-xs-8"> 
-                <input type="email"
-                class="form-control"
-                name="sID"id="sID"
-                aria-describedby="emailHelp"
-                placeholder="ID do Contato" required>
               </div>
             </div>
           </div>

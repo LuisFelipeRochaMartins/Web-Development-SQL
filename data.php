@@ -6,8 +6,8 @@ if(isset($_POST)){
 }
 
 function tratarDadosCampos($oDadosCampos){
-    return (object) [ 
-        "ID"=> $oDadosCampos['ID'],
+    return (object) [
+        "ID"=> idContato(),
         "sNome"=> $oDadosCampos['sNome'],
         "sSobrenome"=> $oDadosCampos['sSobrenome'],
         "sEmail"=> $oDadosCampos['sEmail'],
@@ -37,5 +37,19 @@ function salvarDadosjson($oDadosCampos){
 
     file_put_contents($sArquivo, $sDadosPersitir);
     
+}
+function idContato(){
+    $arquivo = 'contact.json';
+    $dadosJson = json_decode(file_get_contents($arquivo), true);
+
+    if(!$dadosJson){
+        return "1";
+    }
+
+    $contaDados = count($dadosJson);
+    $ultimoJson = (object) $dadosJson[$contaDados-1];
+    $proximoContato = $ultimoJson->ID+1;
+
+    return "$proximoContato";
 }
 ?>
