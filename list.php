@@ -27,28 +27,34 @@
                 </thead>
                 <tbody>
                     <?php
-                        $data = file_get_contents('contact.json');
-                        $data = json_decode($data);
-                        $index = 0;
-                        foreach($data as $value){
-                            echo "
-                                <tr>
-                                    <td>{$value->sNome}</td>
-                                    <td>{$value->sSobrenome}</td>
-                                    <td>{$value->ID}</td>
-                                    <td>{$value->sEmail}</td>
-                                    <td>{$value->sTel}</td>
-                                    <td>
-                                        <a href='editar.php?index=".$index."' class='btn btn-success btn-sm'>Editar</a>
-                                        <a href='deletar.php?index=".$index."' class='btn btn-danger btn-sm'>Deletar</a>
+
+                     include_once 'dbInfo.php';
+                    try{
+
+                        // cria conexão com o banco de dados
+                        $connect = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
+                        // montar consulta com o banco utilizando, a principio somente o código SQL, depois pretendo fazer OOP
+                        $consulta = 'SELECT * FROM pessoas';
+                        // executa a consulta
+                        $comando = $connect->prepare($consulta);
+                        // roda o comando
+                        $comando->execute();
+                        // pega o retorno da consulta
+                        $listacontatos = $comando->fetchAll();
+                    
+                        // foreach para exibir os valores do campo do banco de dados
+                        echo "<table>";
+                        foreach($listacontatos as $contato){
+                            echo "<tr>";
+                            echo "<td>".$contato['id']."</td><td>".$contato['nome']."</td><td>".$contato['sobrenome'].
+                                 "</td><td>".$contato['telefone'];"</td><td>".$contato['telefone']."</td>";
+                                        echo "<a href='editar.php?index=' class='btn btn-success btn-sm'>Editar</a>".
+                                        "<a href='deletar.php?index=' class='btn btn-danger btn-sm'>Deletar</a>
                                     </td>
                                 </tr>";  
                         }
-                    ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+                        echo "</table>";
+                    }catch(PDOException $e){ // se qualquer erro acontecer printa o erro
+                        print("Erro ao conectar com o banco de dados, favor verificar".$e->getMessage());
+                        die();
+                    }
