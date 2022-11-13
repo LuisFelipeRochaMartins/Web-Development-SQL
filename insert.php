@@ -23,6 +23,6 @@ $conn = null;
 
 echo"
 <script>
-window.location.href='list.php'
+window.location.href='view.php'
 </script>"; 
 exit;

@@ -1,5 +1,5 @@
 <?php
-//include_once "index.php";
+include_once 
 
 class CRUD{
     private $nome;
@@ -30,8 +30,13 @@ class CRUD{
         return"INSERT INTO $database VALUES($nome,$sobrenome,$telefone)";
     }
 
-    public function deleteContact($database){
-        return"DELETE FROM $database WHERE nome = $nome AND sobrenome = $sobrenome";
+    public function deleteContact($id){
+        echo"
+        <script>
+        window.location.href='list.php'
+        </script>"; 
+        exit;
+        return"DELETE FROM pessoas WHERE id = $id";
     }
 
     public function viewContact($database){
