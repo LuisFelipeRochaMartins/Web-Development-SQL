@@ -46,7 +46,7 @@
                             <tr>
                             <td style='width:16%' >".$contato['nome']."</td><td style='width:20%'>".$contato['sobrenome']."</td><td style=width:3%;text-align:center;>".$contato['id'].
                             "</td><td style=width:25%>".$contato['email']."</td><td style=width:20%>".$contato['telefone']."</td><td>";
-                            echo "<a href='formUpdate.php?id=$contato[id];'class='btn btn-success btn-sm'>Editar</a>".
+                            echo "<a href='formUpdate.php?id=$contato[id]'class='btn btn-success btn-sm'>Editar</a>".
                             "<a href='delete.php?id=$contato[id];' class='btn btn-danger btn-sm'>Deletar</a>".
                             "</td>
                             </tr>";

@@ -21,8 +21,8 @@
     <div class="col">
       <div>
         <div>
-          <form name ="formulario" action="insertUpdate.php" method="post">
-            <div class="mb-2"  >
+          <form name ="formulario" action="insertUpdate.php?id=" method="post">
+            <div class="mb-2">
               <label for="name" class="form-label">Nome</label>
               <div class="col-sm-8">
                 <input type="text"
@@ -87,7 +87,7 @@
              <label class="form-checkbox" for="checkbox1">Parente</label>
             </div>
             </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="submit" name="id" id="id" value="<?php echo $_GET['id']?>" class="btn btn-primary">Enviar</button>
           </form>
         </div>
       </div>
