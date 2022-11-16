@@ -16,8 +16,8 @@ try {
 }
 $conn = null;
 
-//echo"
-//<script>
-//window.location.href='view.php'
-//</script>"; 
-//exit;
+echo"
+<script>
+window.location.href='view.php'
+</script>"; 
+exit;
