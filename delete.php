@@ -13,4 +13,4 @@ echo"
 <script>
 window.location.href='view.php'
 </script>"; 
-exit;
+exit;   

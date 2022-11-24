@@ -87,7 +87,7 @@
              <label class="form-checkbox" for="checkbox1">Parente</label>
             </div>
             </div>
-              <button type="submit" name="id" id="id" value="<?php echo $_GET['id']?>" class="btn btn-primary">Enviar</button>
+              <button type="submit" name="id" id="id" value="<?php echo $_GET['id']?>" class="btn btn-primary">Salvar Contato</button>
           </form>
         </div>
       </div>
